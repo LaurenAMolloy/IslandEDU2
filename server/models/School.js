@@ -2,11 +2,13 @@ import mongoose from 'mongoose';
 
 const SchoolSchema = new mongoose.Schema({
     name: String,
-    price: Number,
-    description: String,
     location: String,
-    educationLevel, enum: ["nursery", "primary", "seconday"],
-    curriculum, enum: ["British", "IB", "American", "Waldorf", "Montesorri"]
+    description: String,
+    price: Number,
+    image: String,
+    // educationLevel, enum: ["nursery", "primary", "seconday"],
+    // curriculum, enum: ["British", "IB", "American", "Waldorf", "Montesorri"]
 })
 
-module.exports = mongoose.model('School', SchoolSchema);
+const School = mongoose.model('School', SchoolSchema);
+export default School;

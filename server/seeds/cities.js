@@ -1,4 +1,4 @@
-module.exports = [
+const cities = [
     // Major cities (as towns)
     { town: "Nicosia", district: "Nicosia", latitude: 35.1856, longitude: 33.3823 },
     { town: "Limassol", district: "Limassol", latitude: 34.7071, longitude: 33.0226 },
@@ -41,4 +41,6 @@ module.exports = [
     { town: "Moni", district: "Limassol", latitude: 34.7356, longitude: 33.2044 },
     { town: "Geri", district: "Nicosia", latitude: 35.1056, longitude: 33.4189 }
   ];
+
+export default cities
   

@@ -9,6 +9,7 @@ import {
 import Home from './pages/Home';
 import SchoolSearch from './pages/SchoolSearch';
 import NotFound from "./pages/NotFound";
+import MainLayout from "./components/templates/MainLayout";
 
 
 const router = createBrowserRouter([
@@ -24,12 +25,19 @@ const router = createBrowserRouter([
       path: "/schools",
       element: <SchoolSearch />,
       //loader data - extract later
-      // loader: async () => {
-      //   const res = await fetch('https://localhost:8000/api/schools');
-      //   if(!res.ok) throw new Error('Could not fetch schools');
-      //   return res.json()
-      // },
-      errorElement: <div className="errorbox">Could not connect to the Island Api.</div>
+      loader: async () => {
+        const res = await fetch('http://localhost:8000/api/schools');
+
+        if(!res.ok) {
+          throw new Error('Could not fetch schools');
+        }
+
+        const data = await res.json();
+
+        console.log("React Loader Received Data", data)
+        return data;
+      },
+      HydrateFallback: <div>Loading...</div>
       },
       {
       path: "*",

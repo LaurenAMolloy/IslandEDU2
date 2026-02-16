@@ -1,4 +1,4 @@
-module.exports.schoolPrefixes = [
+export const schoolPrefixes = [
     "Little",
     "Bright",
     "Happy",
@@ -12,7 +12,7 @@ module.exports.schoolPrefixes = [
     "Global"
 ];
   
-  module.exports.schoolConcepts = [
+ export const schoolConcepts = [
     "Wonders",
     "Steps",
     "Minds",
@@ -25,7 +25,7 @@ module.exports.schoolPrefixes = [
     "Discovery"
   ];
   
-  module.exports.schoolTypes = [
+  export const schoolTypes = [
     "Nursery",
     "Pre-School",
     "International School",
