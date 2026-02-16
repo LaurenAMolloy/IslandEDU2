@@ -45,21 +45,21 @@ Multi-language support (Greek & English) to better serve the local community.
 
 ```txt
 cyprus-school-finder/
-├── client/                # React Frontend
+├── client/               
 │   ├── src/
-│   │   ├── components/    # Atomic Design System
-│   │   │   ├── atoms/     # Buttons, Inputs, Labels
-│   │   │   ├── molecules/ # Search bars, Form groups
-│   │   │   ├── organisms/ # Navbar, Hero, School Cards
-│   │   │   └── templates/ # Page layouts (MainLayout)
-│   │   ├── pages/         # Route-specific views (Home, Search, 404)
-│   │   ├── App.jsx        # Route definitions & Data Loaders
-│   │   └── main.jsx       # App entry point
+│   │   ├── components/    
+│   │   │   ├── atoms/     
+│   │   │   ├── molecules/ 
+│   │   │   ├── organisms/
+│   │   │   └── templates/
+│   │   ├── pages/
+│   │   ├── App.jsx        
+│   │   └── main.jsx       
 │   └── package.json
-├── server/                # Express.js Backend
-│   ├── data/              # JSON "Database" (schools.json)
-│   ├── routes/            # API Endpoints
-│   ├── server.js          # Express server configuration
+├── server/                
+│   ├── data/              
+│   ├── routes/           
+│   ├── server.js          
 │   └── package.json
-└── README.md              # Project documentation
+└── README.md              
 ```
