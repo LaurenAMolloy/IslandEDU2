@@ -1,9 +1,9 @@
 import { useLoaderData } from 'react-router-dom';
 
-export default function SchoolSearch() {
+export default function SchoolSearchPage() {
   // This hook gets the data directly from the loader in App.jsx
-  const schools = useLoaderData();
-  console.log(schools)
+  const { featuredSchools} = useLoaderData();
+  console.log(featuredSchools)
 
   return (
     <div className="search-container">

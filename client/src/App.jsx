@@ -1,15 +1,14 @@
 import { 
   createBrowserRouter, 
   RouterProvider,
-  Link,
-  useNavigate,
  } from "react-router-dom";
 
 
-import Home from './pages/Home';
-import SchoolSearch from './pages/SchoolSearch';
+import Home from './pages/home/Home';
 import NotFound from "./pages/NotFound";
+import SchoolSearchPage from './pages/search/SchoolSearchPage'
 import MainLayout from "./components/templates/MainLayout";
+import { searchLoader } from "./pages/search/searchloader";
 
 
 const router = createBrowserRouter([
@@ -23,21 +22,10 @@ const router = createBrowserRouter([
       }, 
       {
       path: "/schools",
-      element: <SchoolSearch />,
+      element: <SchoolSearchPage />,
       //loader data - extract later
-      loader: async () => {
-        const res = await fetch('http://localhost:8000/api/schools');
-
-        if(!res.ok) {
-          throw new Error('Could not fetch schools');
-        }
-
-        const data = await res.json();
-
-        console.log("React Loader Received Data", data)
-        return data;
-      },
-      HydrateFallback: <div>Loading...</div>
+      loader: searchLoader,
+      hydrateFallbackElement: <div>Loading...</div>
       },
       {
       path: "*",

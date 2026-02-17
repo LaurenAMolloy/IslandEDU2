@@ -21,16 +21,23 @@ app.use(cors(corsOptions))
 app.use(express.json())
 
 
-//Schools Route
+//GET first 4 Schools
+//Add search functionality
 app.get("/api/schools", async (req, res) => {
     try {
-        const schools = await School.find({});
+        const schools = await School.find({}).limit(4);
         res.json(schools);
     } catch (err) {
         res.status(500).json({message: "Error fetching schools"})
     } 
 });
 
+//GET school by id
 app.listen(8000, () => {
     console.log("SERVER STARTED PORT 8000")
 })
+
+//POSTCreate a School
+//PUT/PATCH Edit Existing School
+//DELETE an Existing School
+
