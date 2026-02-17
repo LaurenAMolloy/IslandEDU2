@@ -57,8 +57,8 @@ cyprus-school-finder/
 │   │   └── main.jsx       
 │   └── package.json
 ├── server/                
-│   ├── data/              
-│   ├── routes/           
+│   ├── models/              
+│   ├── seeds/           
 │   ├── server.js          
 │   └── package.json
 └── README.md              
